@@ -3,16 +3,7 @@ class FlagConnector {
     public async getFlag(): Promise<string | undefined> {
         try {
             const resp: Response = await fetch(this.baseUrl, { method: 'GET' });
-            const body: ReadableStream<Uint8Array> | null = resp.body;
-            const reader: ReadableStreamDefaultReader<Uint8Array> | undefined = body?.getReader();
-            if (!reader) return;
-            let content: string = '';
-            while (true) {
-                const read: ReadableStreamReadResult<Uint8Array> = await reader.read();
-                if (read.done) break;
-                content += read.value;
-            }
-            return content;
+            return await resp.text();
         } catch (error) {
             console.log('error fetching flag: ', error);
             return;
