@@ -1,0 +1,14 @@
+.flag-animation {
+    font-size: 24px;   
+    animation: flagAnimation 1s;
+    opacity: 0;
+    transform: translateY(40px);
+    animation-fill-mode: forwards;
+}
+
+@keyframes flagAnimation {
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
