@@ -1,6 +1,6 @@
 ## Jeff Dayton's Answer
 
-- File 'step2Scripot.js' has my solution for finding the flag URL.
+- File 'step2Script.js' has my solution for finding the flag URL.
 - The connectors folder has my 'flagConnector' which is how I retrieved the flag content.
 - App.tsx contains the solution.
 
